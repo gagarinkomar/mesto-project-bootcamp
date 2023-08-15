@@ -8,3 +8,7 @@
   border: 0 solid transparent;
   flex-shrink: 0;
 }
+
+.card__like:hover {
+  opacity: 0.5;
+}

@@ -5,9 +5,9 @@
   font-size: 14px;
   line-height: 17px;
   border: 0 solid transparent;
-  border-bottom: 1px solid #d9d9d9;
-
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+
 }
