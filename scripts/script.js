@@ -1,6 +1,6 @@
 const popup = document.querySelector(".popup");
 const profile = document.querySelector(".profile");
-const elements = document.querySelector(".elements");
+/* const elements = document.querySelector(".elements"); */
 
 const profileName = profile.querySelector(".profile__name");
 const profileDescription = profile.querySelector(".profile__description");
@@ -25,8 +25,8 @@ formSend.addEventListener("submit", function (e) {
   popup.classList.remove("popup_opened");
 });
 
-elements.addEventListener("click", function (event) {
+/* elements.addEventListener("click", function (event) {
   if (event.target.classList.contains("card__like")) {
     event.target.classList.toggle("card__like_active");
   }
-});
+});  */
