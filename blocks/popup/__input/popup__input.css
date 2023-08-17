@@ -1,15 +1,15 @@
 .popup__input {
   margin: 18px 0 0;
-  padding: 10px 20px;  
+  padding-bottom: 13px;
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
   border: 0 solid transparent;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  width: 358px;
   overflow: hidden;
-
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .popup__input:active, :hover, :focus {
