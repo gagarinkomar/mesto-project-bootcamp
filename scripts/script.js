@@ -76,6 +76,15 @@ buttonAdd.addEventListener("click", function () {
   openPopup(imageAdd);
 });
 
+const formAdd = imageAdd.querySelector(".popup__container");
+formAdd.addEventListener("submit", function (e) {
+  e.preventDefault();
+  cards.prepend(createCard(inputPlace.value, inputLink.value));
+  initialCards.unshift({ name: inputPlace.value, link: inputLink.value });
+  closePopup(imageAdd);
+  inputPlace.value = ""; inputLink.value = "";
+});
+
 page.addEventListener("click", function (e) {
   if (e.target.classList.contains("popup__close")) {closePopup(e.target.closest(".popup"));}
 });
