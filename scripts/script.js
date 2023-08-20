@@ -66,6 +66,16 @@ function collectCards(arr) {
 }
 collectCards(initialCards);
 
+const buttonAdd = profile.querySelector(".profile__button-add");
+const imageAdd = page.querySelector(".popup_image_add");
+const inputPlace = imageAdd.querySelector(".popup__input_field_place");
+const inputLink = imageAdd.querySelector(".popup__input_field_link");
+buttonAdd.addEventListener("click", function () {
+  inputPlace.placeholder = "Название";
+  inputLink.placeholder = "Ссылка на картинку";
+  openPopup(imageAdd);
+});
+
 page.addEventListener("click", function (e) {
   if (e.target.classList.contains("popup__close")) {closePopup(e.target.closest(".popup"));}
 });
