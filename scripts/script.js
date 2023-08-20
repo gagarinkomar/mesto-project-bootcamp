@@ -55,6 +55,7 @@ function createCard(name, link) {
   cardNewImage.src = `${link}`;
   cardNewImage.alt = `${name}`;
   cardNew.querySelector(".card__place").textContent = `${name}`;
+  cardNew.querySelector(".card__trash").addEventListener("click", (e) => cardNew.remove());
   cardNewLike.addEventListener("click", (e) => e.target.classList.toggle("card__like_active"));
   return cardNew;
 }
