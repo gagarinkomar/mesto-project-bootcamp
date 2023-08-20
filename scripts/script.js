@@ -51,9 +51,11 @@ formSend.addEventListener("submit", function (e) {
 function createCard(name, link) {
   const cardNew = template.querySelector(".card").cloneNode(true);
   const cardNewImage = cardNew.querySelector(".card__image");
+  const cardNewLike = cardNew.querySelector(".card__like");
   cardNewImage.src = `${link}`;
   cardNewImage.alt = `${name}`;
   cardNew.querySelector(".card__place").textContent = `${name}`;
+  cardNewLike.addEventListener("click", (e) => e.target.classList.toggle("card__like_active"));
   return cardNew;
 }
 
