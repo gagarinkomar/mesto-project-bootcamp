@@ -57,8 +57,19 @@ function createCard(name, link) {
   cardNew.querySelector(".card__place").textContent = `${name}`;
   cardNew.querySelector(".card__trash").addEventListener("click", (e) => cardNew.remove());
   cardNewLike.addEventListener("click", (e) => e.target.classList.toggle("card__like_active"));
+  cardNewImage.addEventListener("click", (e) => openPopupImage(e))  ;
   return cardNew;
 }
+
+const popupImageDisplay = document.querySelector(".popup_picture");
+const popupImageDisplayFull = popupImageDisplay.querySelector(".popup__full");
+const popupImageDisplayCaption = popupImageDisplay.querySelector(".popup__caption");
+function openPopupImage(e) {
+  popupImageDisplayFull.src = e.target.src;
+  popupImageDisplayFull.alt = e.target.alt;
+  popupImageDisplayCaption.textContent = e.target.alt;
+  openPopup(popupImageDisplay);
+};
 
 const template = document.querySelector("#card").content;
 const cards = document.querySelector(".cards");
