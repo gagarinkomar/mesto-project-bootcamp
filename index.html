@@ -9,7 +9,7 @@
   </head>
   <body class="page">
     <header class="header">
-      <img class="header__logo" src="images/logo-white.svg" alt="logo mesto">
+      <img class="header__logo" src="./images/logo-white.svg" alt="logo mesto">
     </header>
 
     <main class="main">
@@ -25,57 +25,26 @@
         <button type="button" class="profile__button-add cursor"></button>
       </section>
 
-      <ul class="elements" aria-label="image elements">
-        <li class="card">
-          <img class="card__image" src="images/kara4.jpg" alt="kara4">
-          <div class="card__subtitle">
-            <h2 class="card__place">Карачаевск</h2>
-            <button type="button" class="card__like cursor"></button>
-          </div>
-        </li>
-        <li class="card">
-          <img class="card__image" src="images/elb.jpg" alt="elbrus">
-          <div class="card__subtitle">
-            <h2 class="card__place">Гора Эльбрус</h2>
-            <button type="button" class="card__like cursor"></button>
-          </div>
-        </li>
-        <li class="card">
-          <img class="card__image" src="./images/domb.jpg" alt="domb">
-          <div class="card__subtitle">
-            <h2 class="card__place">Домбай</h2>
-            <button type="button" class="card__like cursor"></button>
-          </div>
-        </li>
-        <li class="card">
-          <img class="card__image" src="./images/elb.jpg" alt="elbrus">
-          <div class="card__subtitle">
-            <h2 class="card__place">Гора Эльбрус</h2>
-            <button type="button" class="card__like cursor"></button>
-          </div>
-        </li>
-        <li class="card">
-          <img class="card__image" src="images/domb.jpg" alt="domb">
-          <div class="card__subtitle">
-            <h2 class="card__place">Домбай</h2>
-            <button type="button" class="card__like cursor"></button>
-          </div>
-        </li>
-        <li class="card">
-          <img class="card__image" src="images/kara4.jpg" alt="kara4">
-          <div class="card__subtitle">
-            <h2 class="card__place">Карачаевск</h2>
-            <button type="button" class="card__like cursor"></button>
-          </div>
-        </li>
-      </ul>
+      <section class="elements" aria-label="image elements">
+        <ul class="cards">
+          <template id="card">
+            <li class="card">
+              <img src="#" alt="" class="card__image" />
+              <div class="card__subtitle">
+                <h2 class="card__place"></h2>
+                <button type="button" class="card__like cursor"></button>
+              </div>
+            </li>
+          </template>
+        </ul>
+      </section>
     </main>
 
     <footer class="footer">
       <p class="footer__copyright">© 2023 Mesto Russia</p>
     </footer>
 
-    <div class="popup">
+    <div class="popup popup_profile">
       <div class="popup__container">
         <button type="button" class="popup__close cursor"></button>
         <h2 class="popup__title">Редактировать профиль</h2>
