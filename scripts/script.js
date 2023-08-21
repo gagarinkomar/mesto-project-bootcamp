@@ -38,6 +38,16 @@ buttonEdit.addEventListener("click", function () {
   openPopup(popupProfile);
 });
 
+const popupImageDisplay = document.querySelector(".popup_picture");
+const popupImageDisplayFull = popupImageDisplay.querySelector(".popup__full");
+const popupImageDisplayCaption = popupImageDisplay.querySelector(".popup__caption");
+function openPopupImage(e) {
+  popupImageDisplayFull.src = e.target.src;
+  popupImageDisplayFull.alt = e.target.alt;
+  popupImageDisplayCaption.textContent = e.target.alt;
+  openPopup(popupImageDisplay);
+};
+
 const profileName = profile.querySelector(".profile__name");
 const profileDescription = profile.querySelector(".profile__description");
 const formSend = popupProfile.querySelector(".popup__container");
@@ -61,16 +71,6 @@ function createCard(name, link) {
   return cardNew;
 }
 
-const popupImageDisplay = document.querySelector(".popup_picture");
-const popupImageDisplayFull = popupImageDisplay.querySelector(".popup__full");
-const popupImageDisplayCaption = popupImageDisplay.querySelector(".popup__caption");
-function openPopupImage(e) {
-  popupImageDisplayFull.src = e.target.src;
-  popupImageDisplayFull.alt = e.target.alt;
-  popupImageDisplayCaption.textContent = e.target.alt;
-  openPopup(popupImageDisplay);
-};
-
 const template = document.querySelector("#card").content;
 const cards = document.querySelector(".cards");
 function collectCards(arr) {
@@ -85,8 +85,6 @@ const imageAdd = page.querySelector(".popup_image_add");
 const inputPlace = imageAdd.querySelector(".popup__input_field_place");
 const inputLink = imageAdd.querySelector(".popup__input_field_link");
 buttonAdd.addEventListener("click", function () {
-  inputPlace.placeholder = "Название";
-  inputLink.placeholder = "Ссылка на картинку";
   openPopup(imageAdd);
 });
 
@@ -94,7 +92,6 @@ const formAdd = imageAdd.querySelector(".popup__container");
 formAdd.addEventListener("submit", function (e) {
   e.preventDefault();
   cards.prepend(createCard(inputPlace.value, inputLink.value));
-  initialCards.unshift({ name: inputPlace.value, link: inputLink.value });
   closePopup(imageAdd);
   inputPlace.value = ""; inputLink.value = "";
 });
