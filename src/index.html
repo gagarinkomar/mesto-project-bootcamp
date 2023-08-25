@@ -3,19 +3,16 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./pages/index.css">
-    <script src="./scripts/validate.js" type="module"></script>
-    <script src="./scripts/script.js" type="module"></script>
     <title>mesto</title>
   </head>
   <body class="page">
     <header class="header">
-      <img class="header__logo" src="./images/logo-white.svg" alt="logo mesto">
+      <img class="header__logo" src="<%=require('./images/logo.svg')%>" alt="logo mesto">
     </header>
 
     <main class="main">
       <section class="profile" aria-label="personal information">
-        <img class="profile__avatar" src="./images/jack.jpg" alt="image avatar">
+        <img class="profile__avatar" src="<%=require('./images/jack.jpg')%>" alt="avatar">
         <div class="profile__user">
           <div class="profile__title">
             <h1 class="profile__name">Жак-Ив Кусто</h1>
