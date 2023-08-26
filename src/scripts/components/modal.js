@@ -18,8 +18,7 @@ export function setCloseByClickOverlayListener(el) {
 }
 export function runOverlayListener(event) {
     if (event.target.classList.contains("popup_opened")) {
-        const openedPopup = document.querySelector(".popup_opened");
-        closePopup(openedPopup);
+        closePopup(event.target);
     }
 }
 export function closeByEsc(evt) {
@@ -51,7 +50,7 @@ export function savePopupProfile() {
         addButtonInactive(formAddProfile);
     });
 }
-savePopupProfile();
+
 
 export function openPopupImage(e) {
     popupImageDisplayFull.src = e.target.src;
@@ -60,7 +59,7 @@ export function openPopupImage(e) {
     openPopup(popupImageDisplay);
 }
 
-function savePopupImage() {
+export function savePopupImage() {
     formAdd.addEventListener("submit", function (e) {
         e.preventDefault();
         closePopup(imageAdd);
@@ -70,7 +69,7 @@ function savePopupImage() {
         addButtonInactive(formAdd);
     });
 }
-savePopupImage();
+
 
 function addButtonInactive(form) {
     const popupButtonSave = form.querySelector(".popup__button-save");

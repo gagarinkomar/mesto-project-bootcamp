@@ -2,7 +2,6 @@ import {
     buttonAdd,
     buttonEdit,
     cards,
-    formData,
     imageAdd, inputDescription,
     inputLink,
     inputName,
@@ -39,6 +38,10 @@ export const initialCards = [
     }
 ];
 
+const formData = {
+    inputErrorClass: "form__input_type_error",
+    errorClass: "form__input-error_active",
+};
 
 export function createCard(name, link) {
     const cardNew = template.querySelector(".card").cloneNode(true);
@@ -66,8 +69,6 @@ function collectCards(arr) {
 collectCards(initialCards);
 
 buttonAdd.addEventListener("click", function (e) {
-    inputPlace.value = "";
-    inputLink.value = "";
     openPopup(imageAdd);
     clearInput(imageAdd, formData.errorClass, formData.inputErrorClass);
 });

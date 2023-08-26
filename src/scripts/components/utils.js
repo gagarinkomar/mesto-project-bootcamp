@@ -1,7 +1,4 @@
-const formData = {
-    inputErrorClass: "form__input_type_error",
-    errorClass: "form__input-error_active",
-};
+
 
 const page = document.querySelector(".page");
 const profile = document.querySelector(".profile");
@@ -33,6 +30,6 @@ const template = document.querySelector("#card").content;
 const cards = document.querySelector(".cards");
 
 
-export {formData, page, profile, popupProfile, formAddProfile, inputName, inputDescription, profileName, profileDescription,
+export { page, profile, popupProfile, formAddProfile, inputName, inputDescription, profileName, profileDescription,
     formUserProfile, imageAdd, formAdd, inputPlace, inputLink, buttonEdit, buttonAdd, popupImageDisplay, popupImageDisplayFull, template,
     popupImageDisplayCaption, cards}
